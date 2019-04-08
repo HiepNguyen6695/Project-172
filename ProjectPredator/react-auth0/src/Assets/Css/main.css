@@ -1,0 +1,458 @@
+@import url('https://fonts.googleapis.com/css?family=Merriweather');
+*{
+  margin: 0;
+  padding: 0;
+}
+
+label{
+  font-family: sans-serif;
+}
+
+body{
+  background: white;
+}
+
+nav{
+  background: white;
+  width: 100%;
+  height: 60px;
+  position: fixed;
+  z-index: 2;
+}
+
+.logo{
+  font-family: 'Merriweather', serif;
+  font-size: 50px;
+  color: black;
+  text-align: center;
+}
+
+.logo1{
+  font-family: 'Merriweather', serif;
+  font-size: 34px;
+  position: absolute;
+  width: 100%;
+  height: 60px;
+  top: 20px;
+  line-height: 50px;
+  color: black;
+  text-align: center;
+}
+
+footer{
+  background: rgba(255, 170, 0, 1);
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  color: white;
+  position: fixed;
+  bottom: 0;
+}
+.loading{
+  opacity: 1;
+  transition: 0.5s;
+}
+.loaded .loading{
+  opacity: 0;
+  transition: 0.5s;
+}
+/* -- Panda Head -- */
+#face-wrap {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 100;
+  background: rgba(255, 170, 0, 1);
+}
+#face {
+  position: relative;
+  width: 190px;
+  height: 160px;
+  border-radius: 80px;
+  background: #fff;
+  top: 30%;
+  left: 45%;
+  border: 1px solid black;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(15deg);
+  -moz-transform: rotate(15deg);
+  -o-transform: rotate(15deg);
+  z-index: 10;
+}
+
+.left-eye-shade, .right-eye-shade{
+  background: #000;
+  width: 45px;
+  height: 70px;
+  margin: 10px;
+  position: absolute;
+  rotate: 220deg;
+  border-radius: 25px / 9px 29px 45px 45px;
+  z-index: 9;
+}
+
+.left-eye-shade{
+  transform: rotate(46deg);
+  top: 30px;
+  left: 15px;
+}
+
+.right-eye-shade{
+  transform: scaleX(-1) rotate(45deg);
+  top: 30px;
+  left: 110px;
+}
+
+/* eyes */
+.left-eye-curve, .right-eye-curve{
+  width: 50px; 
+  height: 40px; 
+  border: solid 2px #fff;
+  border-color:#fff transparent transparent transparent;
+  border-radius: 70%/50px 40px 0 0;
+  position: absolute;
+  z-index: 9; 
+}
+
+.left-eye-curve{
+  top: 40px;
+  left: 35px;
+  transform: scaleY(-1) rotate(-20deg);
+}
+
+.right-eye-curve{
+  top: 40px;
+  left: 100px;
+  transform: scaleY(-1) rotate(10deg);
+}
+
+.nose{
+  background: #000; 
+  width: 30px; 
+  height: 30px; 
+  border-radius: 50%; 
+  position: absolute; 
+  z-index: 9; 
+  top: 100px;
+  left: 80px;
+}
+
+.left-ear, .right-ear{
+  background: #000; 
+  border-radius: 50%; 
+  width: 70px; 
+  height: 70px; 
+  position: absolute;  
+  z-index: 9;
+}
+
+.left-ear{
+  top: 170px;
+  left: 650px;
+}
+
+.right-ear{
+  top: 220px;
+  left: 810px;
+}
+
+@keyframes blink{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+.iphone{
+  width: 35px;
+  height: 60px;
+  border-radius: 5px;
+  background: white;
+  border: 1px solid black;
+  top: 360px;
+  position: absolute;
+  left: 700px;
+  transform: rotate(10deg);
+  z-index: 1000;
+}
+
+.phone-camera{
+  width: 6px;
+  height: 11px;
+  margin: 1px;
+  border-radius: 30px;
+  position: absolute;
+  border: 1px solid black;
+}
+
+.phone-logo{
+  transform: rotate(-90deg);
+  font-size: 9px;
+  position: absolute;
+  left: 12px;
+  top: 38px;
+}
+
+.lense{
+  width: 2px;
+  height: 2px;
+  border: 1px solid black;
+  position: absolute;
+  border-radius: 50%;
+  left: 1px;
+  top: 1px;
+}
+
+.left-blinking-animation{
+  border-bottom: 25px solid black;
+  border-left: 2px solid transparent;
+  border-right: 2px solid transparent;
+  position: absolute;
+  height: 10px;
+  width: 2px;
+  top: 40px;
+  left: -15px;
+  transform: rotate(95deg);
+  animation: 2s blink infinite;
+}
+
+.left-blinking-animation:nth-of-type(5n + 2){
+  top: 50px;
+  left: -12px;
+  transform: rotate(60deg);
+  animation-delay: 100ms;
+}
+
+.left-blinking-animation:nth-of-type(5n + 3){
+  top: 60px;
+  left: -5px;
+  transform: rotate(40deg);
+  animation-delay: 200ms;
+}
+
+.left-blinking-animation:nth-of-type(5n + 4){
+  top: 65px;
+  left: 5px;
+  transform: rotate(0deg);
+  animation-delay: 300ms;
+}
+
+.left-blinking-animation:nth-of-type(5n + 5){
+  top: 62px;
+  left: 18px;
+  transform: rotate(-35deg);  
+  animation-delay: 400ms;
+}
+
+.music{
+    position: relative;
+    width: 850px;
+    height: 500px;
+    top: 100px;
+    left: 20%;
+    background: white;
+    box-shadow: 0 5px 30px rgba(0,0,0,0.2);
+    border-radius: 50px;
+
+    font-weight: 100;
+    text-align: center;
+    transition: 0.5s;
+}
+
+.Single-Sign-On-Button, .Slack-SSO, .Single-Sign-Out-Button{
+    position: absolute;
+    width: 200px;
+    height: 40px;
+    cursor: pointer;
+    border: none;
+    font-family: 'sans-serif';
+    color: #fff;
+    font-size: 16px;
+    z-index: 1;
+    border-radius: 30px;
+    transition: 0.5s;
+    outline: none;
+}
+.Single-Sign-On-Button, .Slack-SSO{
+    left: 29.2%;
+}
+.Single-Sign-On-Button{
+  top: 30%;
+  background: #F8C471;
+}
+
+.Slack-SSO{
+  top: 45%;
+  background: #FF8484;
+}
+.Single-Sign-Out-Button{
+  top: 85%;
+  left: 83%;
+  width: 100px;
+  height: 40px;
+  background: #FF8484;
+
+}
+.Single-Sign-Out-Button:hover{
+  background: #D30000;
+  transition: 0.5s;
+}
+
+.Single-Sign-On-Button:hover{
+  background: #F39F00;
+  transition: 0.5s;
+}
+.Slack-SSO:hover{
+  background: #D30000;
+  transition: 0.5s;
+}
+
+.box-wrapper{
+    width: 485px;
+    height: 350px;
+    border: 1px solid black;
+    border-radius: 40px;
+    position: absolute;
+    z-index: 0;
+    top: 16%;
+    left: 10%;
+    box-shadow: -25px 13px 30px rgba(0,0,0,.2);
+    transform: perspective(1200px) rotateY(25deg) rotateX(20deg);
+    transition: 0.5s;
+}
+.box-wrapper:hover{
+  left: 10%;
+  transition: 0.5s;
+  box-shadow: -20px 10px 20px rgba(0,0,0,0.3);
+
+}
+
+.home-link-logo{
+  text-decoration: none;
+}
+
+.line-left, .line-right{
+  width: 50px;
+  height: 1px;
+  background: #000;
+}
+.line-left{
+  position: absolute;
+  top: 29px;
+  left: 130px;
+
+}
+
+.line-right{
+  position: absolute;
+  top: 29px;
+  right: 130px;
+}
+
+.list-wrapper{
+  border: 1px solid black;
+  position: absolute;
+  width: 1350px;
+  height: 555px;
+  border-radius: 30px;
+  top: 10%;
+  left: 3%;
+}
+.sub-list-wrapper{
+  position: absolute;
+  width: 35%;
+  height: 80%;
+  top: 15%;
+  left: 3%;
+  overflow-y: scroll;
+  
+}
+.list{
+  height: 30px;
+  line-height: 30px;
+  position: relative;
+  padding: 0 20px;
+  margin-top: 15px;
+  font-family: 'Merriweather', serif;
+  font-size: 14px;
+  border: 1px solid black;
+  border-radius: 30px;
+  margin-bottom: 15px;
+  
+}
+.list-f-name, .list-l-name, .list-job-title, .list-salary, .list-finished-projects{
+  float: left;
+  position: relative;
+  text-align: center;
+  margin-right: 40px;
+  
+}
+
+.delete-button{
+  position: absolute;
+  cursor: pointer;
+  outline: none;
+  top: 15px;
+  left: 420px;
+  width: 45px;
+  height: 45px;
+  border-bottom-left-radius: 30px;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  border: none;
+
+  background: #F39F00;
+  color: white;
+  font-family: 'Merriweather', serif;
+  font-size: 12px;
+  transition: 0.5s;
+  z-index: 9;
+
+}
+.delete-button:hover{
+  background: #F9891F;
+  transition: 0.5s;
+}
+
+.employee-title{
+  width: 100%;
+  text-align: center;
+  font-family: 'Merriweather', serif;
+  font-size: 29px;
+  position: relative;
+  top: 20px;
+}
+
+.header-title{
+  position: relative;
+  top: 20px;
+  width: 50%;
+  height: 30px;
+  line-height: 30px;
+  padding: 0 45px;
+  
+}
+.fname-title, .lname-title, .job-title-title{
+  float: left;
+  margin-right: 20px; 
+}
+
+.salary-title{
+  float: left;
+  margin-left: 25px;
+}
+
+.finished-job-title{
+  float: left;
+  margin-left: 25px;
+}
+
+.line{
+  width: 450px;
+  height: 1px;
+  background: #000;
+  position: relative;
+  top: 25px;
+}
