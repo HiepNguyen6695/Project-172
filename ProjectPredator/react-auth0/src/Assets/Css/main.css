@@ -362,7 +362,7 @@ footer{
 }
 .sub-list-wrapper{
   position: absolute;
-  width: 35%;
+  width: 50%;
   height: 80%;
   top: 15%;
   left: 3%;
@@ -375,6 +375,7 @@ footer{
   position: relative;
   padding: 0 20px;
   margin-top: 15px;
+  width: 100%;
   font-family: 'Merriweather', serif;
   font-size: 14px;
   border: 1px solid black;
@@ -386,8 +387,7 @@ footer{
   float: left;
   position: relative;
   text-align: center;
-  margin-right: 40px;
-  
+  margin-right: 70px;
 }
 
 .delete-button{
@@ -395,14 +395,13 @@ footer{
   cursor: pointer;
   outline: none;
   top: 15px;
-  left: 420px;
+  left: 90%;
   width: 45px;
   height: 45px;
   border-bottom-left-radius: 30px;
   border-top-right-radius: 30px;
   border-bottom-right-radius: 30px;
   border: none;
-
   background: #F39F00;
   color: white;
   font-family: 'Merriweather', serif;
@@ -434,25 +433,32 @@ footer{
   padding: 0 45px;
   
 }
-.fname-title, .lname-title, .job-title-title{
+.fname-title, .lname-title, .job-title-title, .salary-title, .finished-job-title{
   float: left;
-  margin-right: 20px; 
-}
-
-.salary-title{
-  float: left;
-  margin-left: 25px;
-}
-
-.finished-job-title{
-  float: left;
-  margin-left: 25px;
+  margin-right: 50px; 
 }
 
 .line{
-  width: 450px;
+  width: 550px;
   height: 1px;
   background: #000;
   position: relative;
   top: 25px;
 }
+
+.line1, .line2{
+  width: 50px;
+  height: 1px;
+  background: #000;
+  position: absolute;
+  top: 20px;
+   
+}
+.line1{
+  left: 40%;
+}
+.line2{
+  left: 56%;
+}
+
+

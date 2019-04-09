@@ -46,12 +46,17 @@ class Secret extends Component {
 
   renderPredators = ({ID, f_name, l_name, job_title, salary, finished_projects}, i) => 
     <table className="list" key={i}>
-      <tbody className="list-f-name">{f_name}</tbody>
-      <tbody className="list-l-name">{l_name}</tbody>
-      <tbody className="list-job-title">{job_title}</tbody>
-      <tbody className="list-salary">{salary}</tbody>
-      <tbody className="list-finished-projects">{finished_projects}</tbody>
-      <button className="delete-button" key={i} onClick={() => {this.deletePredator(i, ID)}}>Fire</button>
+      <tbody>
+        <tr>
+          <td className="list-f-name">{f_name}</td>
+          <td className="list-l-name">{l_name}</td>
+          <td className="list-job-title">{job_title}</td>
+          <td className="list-salary">{salary}</td>
+          <td className="list-finished-projects">{finished_projects}</td>
+          <button className="delete-button" key={i} onClick={() => {this.deletePredator(i, ID)}}>Fire</button>
+        </tr>
+      </tbody>
+
     </table>
 
   render() {
@@ -61,14 +66,18 @@ class Secret extends Component {
       <div className="Secret">
         <div className="list-wrapper">
             <h1 className="employee-title">Employee</h1>
-            <div className="header-title">
-                <div className="fname-title">First Name</div>
-                <div className="lname-title">Last Name</div>
-                <div className="job-title-title">Job Title</div>
-                <div className="salary-title">Salary</div>
-                <div className="finished-job-title">Finished Jobs</div>
-                <div className="line"></div>
-              </div>
+            <table className="header-title">
+              <tbody>
+                <tr>
+                    <td className="fname-title">First Name</td>
+                    <td className="lname-title">Last Name</td>
+                    <td className="job-title-title">Job Title</td>
+                    <td className="salary-title">Salary</td>
+                    <td className="finished-job-title">Finished Jobs</td>
+                    <div className="line"></div>
+                </tr>
+              </tbody>
+            </table>
             <div className="sub-list-wrapper">
 
                 {predators.map(this.renderPredators)}
