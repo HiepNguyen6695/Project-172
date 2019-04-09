@@ -7,8 +7,6 @@ const LOGIN_SUCCESS_PAGE = "/secret";
 const LOGIN_FAILURE_PAGE = "/";
 
 class Auth{
-
-
     auth0 = new auth0.WebAuth({
         domain: "project-nobody.auth0.com",
         clientID: "0MR3Job9VTchRNlWrhDDefUHO33SK193",
