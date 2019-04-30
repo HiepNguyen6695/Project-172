@@ -80,6 +80,18 @@ app.get('/secret/delete/:id', (req, res) =>{
         }
     });
 });
+/*
+// Delete specific id number.
+app.get('/secret/delete/:id', (req, res) =>{
+    const DELETE_FROM_PREDATORS_WHERE_ID = `DELETE FROM predators WHERE ID = ?`;
+    connection.query(DELETE_FROM_PREDATORS_WHERE_ID, [req.params.id], (err, results) => {
+        if (err){
+            return res.send(err)
+        }else{
+            return res.send('Successfully deleted!')
+        }
+    });
+});*/
 
 // Listen to port 4000
 app.listen(4000, () =>{
