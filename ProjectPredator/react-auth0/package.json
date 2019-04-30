@@ -4,7 +4,9 @@
   "private": true,
   "dependencies": {
     "auth0-js": "^9.10.1",
+    "canvasjs": "^1.8.1",
     "cors": "^2.8.5",
+    "cross-spawn": "^6.0.5",
     "history": "^4.9.0",
     "mysql": "^2.16.0",
     "react": "^16.8.6",

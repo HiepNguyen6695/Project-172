@@ -8,15 +8,17 @@ const LOGIN_FAILURE_PAGE = "/";
 
 class Auth{
     auth0 = new auth0.WebAuth({
-        domain: "project-nobody.auth0.com",
-        clientID: "0MR3Job9VTchRNlWrhDDefUHO33SK193",
-        redirectUri: "http://localhost:3000/secret",
-        audience: "https://project-nobody.auth0.com/userinfo",
-        responseType: "token id_token",
-        scope: "openid"
+        domain: 'projectpredators.auth0.com',
+        clientID: 'VQ4rAchEb8LWDRkUJ17BLhylq0UwVFuY',
+        redirectUri: 'http://localhost:3000/secret',
+        audience: "https://projectpredators.auth0.com/userinfo",
+        responseType: 'token id_token',
+        scope: 'openid'
+
     });
     
     constructor(){
+      
         this.handleAuthentication = this.handleAuthentication.bind(this);
         this.isAuthenticated = this.isAuthenticated.bind(this);
         this.getProfile = this.getProfile.bind(this);

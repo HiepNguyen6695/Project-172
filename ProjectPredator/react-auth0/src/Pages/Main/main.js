@@ -12,7 +12,7 @@ class Main extends Component {
           
             <button className="Single-Sign-On-Button" onClick={this.props.auth.signin}>Single Sign On</button>
           
-          <a href="https://project-nobody.auth0.com/samlp/jgWaX0A2TgcURKdtVnAQyKu6N6KhSIcw"><input className="Slack-SSO" type="button" value="Slack SSO"></input></a>
+          <a href="https://projectpredators.auth0.com/samlp/wcalrCmv0aPBUpR16dlleRsTjQtdlepj"><input className="Slack-SSO" type="button" value="Slack SSO"></input></a>
         </div>
       </div>
     );

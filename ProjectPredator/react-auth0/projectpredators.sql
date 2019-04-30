@@ -1,3 +1,4 @@
+use projectpredators;
 use predators;
 Drop table predators;
 
