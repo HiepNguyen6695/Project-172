@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import Chart from '../../Components/Chart/chart';
 class Secret extends Component {
     constructor(props){
         super(props);
@@ -14,25 +14,53 @@ class Secret extends Component {
                 salary: 0,
                 finished_projects: 0
             },
-            visible: false
+            visible: false,
+            chartData: {}
 
         }
         this.getPredators = this.getPredators.bind(this);
         this.deletePredator = this.deletePredator.bind(this);
         this.renderPredators = this.renderPredators.bind(this);
         this.componentDidMount = this.componentDidMount.bind(this);
+        this.handleDataChart = this.handleDataChart.bind(this);
+
     }
 
   componentDidMount(){
     this.getPredators();
+    
+  }
+  componentWillMount(){
+    this.handleDataChart();
   }
 
   //Print all posible queries from mysql workbench
   getPredators = _ =>{
     fetch("http://localhost:4000/secret/").then(response => response.json()).then(response => this.setState({predators: response.data})).catch(err => console.error(err))
+
+    
+  
   }
 
-  deletePredator = (i, ID)=>{
+  handleDataChart(){
+    
+    this.setState({
+      chartData:{
+        labels: ["Hiep", "Jose", "Alex"],
+        datasets: [{
+            labels: "Population",
+            data: [90,80,120],
+            backgroundColor: [
+                "rgba(255, 99, 132, 0.6)",
+                "rgba(54, 162, 253, 0.6)",
+                "rgba(255, 206, 86, 0.6)"
+            ]
+        }]
+      }
+    })
+  }
+
+  deletePredator = (i)=>{
     let predators = this.state.predators.slice();
     console.log(predators);
  
@@ -47,12 +75,13 @@ class Secret extends Component {
   renderPredators = ({ID, f_name, l_name, job_title, salary, finished_projects}, i) => 
     <table className="list" key={i}>
       <tbody>
-        <tr>
+        <tr onChange={() => this.setState({})}>
           <td className="list-f-name">{f_name}</td>
           <td className="list-l-name">{l_name}</td>
           <td className="list-job-title">{job_title}</td>
           <td className="list-salary">{salary}</td>
           <td className="list-finished-projects">{finished_projects}</td>
+         
           <button className="delete-button" key={i} onClick={() => {this.deletePredator(i, ID)}}>Fire</button>
         </tr>
       </tbody>
@@ -82,11 +111,11 @@ class Secret extends Component {
 
                 {predators.map(this.renderPredators)}
             </div>
-            
+            <Chart chartData={this.state.chartData}/>
+           
         </div>
- 
         <button className="Single-Sign-Out-Button" onClick={this.props.auth.signOut}>Sign out</button>
- 
+        <a href="http://localhost:8080/job/ProjectPredators/"><button className="Jenkins-btn">Jenkins</button></a>
       </div>
     );
   }

@@ -461,4 +461,33 @@ footer{
   left: 56%;
 }
 
+.Chart{
+  position: absolute;
+  top: 60px;
+  left: 800px;;
+  border: 1px solid black;
+  width: 500px;
+  height: 350px;;
+  text-align: center;
+  border-radius: 40px;
 
+}
+.Jenkins-btn{
+  position: absolute;
+  top: 550px;
+  left: 10px;
+  background: #FF8484;
+  width: 80px;
+  border-radius: 40px;
+  color: white;
+  height: 30px;
+  font-family: 'Merriweather', serif;
+  border: none;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.Jenkins-btn:hover{
+  width: 100px;
+  background: #D30000;
+  transition: 0.5s;
+}

@@ -5,7 +5,7 @@ class Header extends Component {
     return (
         <header>
             <nav>
-                <a className="home-link-logo" href="/"><div className="logo">LOCO</div></a>
+                <a className="home-link-logo" href="/"><div className="logo">EMOTIONLESS</div></a>
                 
             </nav>
         </header>
